@@ -94,6 +94,7 @@ public class DomainResolveKeeper {
         ModifyDynamicDNSRequest req = new ModifyDynamicDNSRequest();
         req.setDomain(properties.getDomainName());
         req.setRecordId(properties.getRecordId());
+        req.setSubDomain(recordInfo.getSubDomain());
         req.setRecordLine(recordInfo.getRecordLine());
         req.setValue(newIpAddress);
         // 返回的resp是一个ModifyDynamicDNSResponse的实例，与请求对象对应
@@ -131,5 +132,7 @@ public class DomainResolveKeeper {
         log.info("parsed inet address: {} ", inetAddress);
         return isInetAddress &&  inetAddress instanceof Inet6Address;
     }
+
+
 
 }
