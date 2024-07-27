@@ -18,12 +18,10 @@ import org.springframework.stereotype.Component;
 import java.net.Inet6Address;
 import java.net.InetAddress;
 import java.net.URI;
-import java.net.UnknownHostException;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.time.Duration;
-import java.util.regex.Pattern;
 
 /**
  * @author qihuaiyuan
@@ -132,7 +130,5 @@ public class DomainResolveKeeper {
         log.info("parsed inet address: {} ", inetAddress);
         return isInetAddress &&  inetAddress instanceof Inet6Address;
     }
-
-
 
 }
